@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 export TERM=xterm
 (nohup /usr/bin/tun2proxy-bin --setup $PROXY_COMMAND > /var/log/tun2proxy.log 2>&1) &
