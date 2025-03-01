@@ -18,4 +18,4 @@ RUN apt update && apt install -y iproute2 && apt clean all
 COPY --from=builder /worker/target/release/tun2proxy-bin /usr/bin/tun2proxy-bin
 COPY --from=builder /worker/scripts/entrypoint.sh /usr/bin/scripts/entrypoint.sh
 
-ENTRYPOINT ["/usr/bin/scripts/entrypoint.sh"]
+ENTRYPOINT ["sh", "-c", "/usr/bin/scripts/entrypoint.sh"]
